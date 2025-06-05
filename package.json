@@ -1,0 +1,35 @@
+{
+  "name": "mentorize-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "api-project",
+    "frontend"
+  ],
+  "scripts": {
+    "// Scripts para o Backend (api-project)": "Estes rodam comandos dentro do 'api-project'",
+    "lint:api": "npm run lint -w api-project",
+    "test:api": "npm run test -w api-project",
+    "test:api:cov": "npm run test:cov -w api-project",
+    "build:api": "npm run build -w api-project",
+    "start:dev:api": "npm run start:dev -w api-project",
+
+    "// Scripts para o Frontend (frontend)": "Estes rodam comandos dentro do 'frontend'",
+    "lint:frontend": "npm run lint -w frontend",
+    "build:frontend": "npm run build -w frontend",
+    "dev:frontend": "npm run dev -w frontend",
+    "start:frontend": "npm run start -w frontend",
+    "// test:frontend": "npm run test -w frontend", 
+
+    "// Scripts Agregados (rodam em múltiplos workspaces)": "Exemplos",
+    "lint": "npm run lint:api && npm run lint:frontend",
+    "build": "npm run build:api && npm run build:frontend",
+    "test": "npm run test:api:cov && echo 'Frontend tests: (adicione ou descomente test:frontend quando pronto)'"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
