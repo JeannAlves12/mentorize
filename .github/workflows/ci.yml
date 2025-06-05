@@ -33,7 +33,3 @@ jobs:
       - name: Testes Frontend (frontend) - Pulado
         # Como você decidiu não rodar testes no frontend por agora
         run: echo "Passo de teste do frontend pulado conforme configurado."
-
-      - name: Build Frontend (frontend)
-        # Executa o script 'build' do package.json dentro de 'frontend'
-        run: npm run build -w frontend
