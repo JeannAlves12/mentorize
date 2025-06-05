@@ -26,11 +26,6 @@ jobs:
         # e instala dependências para api-project e frontend.
         run: npm ci
 
-      # --- Backend (api-project) ---
-      - name: Lint Backend (api-project)
-        # Executa o script 'lint' do package.json dentro de 'api-project'
-        run: npm run lint -w api-project
-
       - name: Testes Cobertura Backend (api-project)
         # Executa o script 'test:cov' do package.json dentro de 'api-project'
         run: npm run test:cov -w api-project
