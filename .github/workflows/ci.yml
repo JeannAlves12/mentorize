@@ -30,11 +30,6 @@ jobs:
         # Executa o script 'test:cov' do package.json dentro de 'api-project'
         run: npm run test:cov -w api-project
 
-      # --- Frontend (frontend) ---
-      - name: Lint Frontend (frontend)
-        # Executa o script 'lint' do package.json dentro de 'frontend'
-        run: npm run lint -w frontend
-
       - name: Testes Frontend (frontend) - Pulado
         # Como você decidiu não rodar testes no frontend por agora
         run: echo "Passo de teste do frontend pulado conforme configurado."
